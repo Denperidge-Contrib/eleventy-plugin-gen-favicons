@@ -12,7 +12,7 @@ const defaultOptions = {
 
 module.exports = (eleventyConfig, options) => {
   const {outputDir: pOutputDir, manifestData, generateManifest, skipCache} = Object.assign({}, defaultOptions, options);
-  const outputDir = pOutputDir == '' ? eleventyConfig.dir.output : pOutputDir;
+  const outputDir = pOutputDir == '' ? eleventyConfig.directories.output : pOutputDir;
   // favicons shortcode
   // examples:
   // {% favicons 'favicon.svg' %}
